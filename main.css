@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {text-decoration: none;
+  font-family: inherit;
+  font-size: 2em;
+
+}
+
+img{
+  max-width: 100%;
+}
+
+    
+
+ul, ol{
+  list-style-type:none;
+  margin-top: auto;
+}
+  
+/* HEADER*/
+
+header{
+  background-color: #30343F;
+  padding: 2.5em;
+
+}
+
+.with_icon{
+display: flex;
+align-items: center;
+gap: 5px;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar_logo{
+  max-width: 300px;
+
+}
+.nav-link{
+  font-size: medium;
+  padding: 5px;
+  transition: background .3s ease-in-out;
+  position: relative;
+
+}
+.nav-link:hover{
+  background-color: #FF3333CC;
+
+}
+.navbar_menu{
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  gap: 3em;
+  margin-bottom: 0;
+}
+.submenu{
+  position: absolute;
+  background-color: #30343F;
+  display: none;
+  width: 200px;
+  Padding-left: 0;
+  padding-top: 5PX;
+  z-index: 10;
+}
+.with_submenu:hover .submenu{
+  display: block;
+
+}
+ .submenu_link{
+  display: block;
+  font-size: medium;
+  color: #FFFFFF;
+
+ }
+
+ .submenu_item:hover{
+  background-color: #FF3333CC;
+  transition: background .3s ease-in-out;
+ }
+
+
+ /* BANNER PRINCIPAL*/
+  .banner{
+    background-image: url(./multimedia/funkos-banner.webp);
+    background-position: 25% 75%;
+    background-size: cover;
+    width: 100%;
+    color: #FFFFFF;
+    padding: 100px;
+    position: relative;
+  }
+
+  .banner::before{
+    content: ' ';
+    background-color: rgb(0,0,0,0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(1.2px) brightness(.5   );
+  }
+
+.banner_contenido{
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  z-index: 2;}
+
+  .banner_titulo{
+    font-size: xx-large;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+  }
+.banner_texto{
+  font-size: medium;
+  color: #FFFFFF;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 3rem;
+  font-weight: 100;
+
+
+}
+  .banner_boton{
+    display: inline-block;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    font-size: medium;
+    padding: 3px 40px;
+    font-weight: 400  ;
+    color: black;
+    transition: all .3s ease-in-out;
+    
+  }
+   .banner_boton:hover{
+    background-color: #FF3333CC;
+    color: #FFFFFF;
+
+   }
+
+
+   /* COLECCIONES*/
+
+   .coleccion{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 16px 0;
+   }
+   .coleccion:nth-child(2) .coleccion_img{
+    order: -1;
+   }
+
+   .coleccion_contenido{
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: start;
+   }
+
+   .coleccion_titulo{
+    font-size: xx-large;
+    font-family: 'Raleway', sans-serif;
+    padding-right: 40px;
+   }
+
+   .coleccion_texto{
+    border-bottom:solid #FF3333;
+    padding-bottom: 20px;
+    
+   }
+
+   .coleccion_link{
+    display: inline-block;
+    background: #30343F;
+    border-radius: 50px;
+    font-size: medium;
+    padding: 3px 40px;
+    font-weight: 400  ;
+    color: #FFFFFF;
+    transition: all .3s ease-in-out;
+   }
+
+   .coleccion_link:hover{
+    background-color: #FF3333CC;
+    color: #FFFFFF;
+   }
+
+   /*SLIDER*/
+
+   .slider{
+
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    margin: 50px auto;
+   }
+
+   .slider_titulo{
+    font-family: 'Raleway', sans-serif;
+    font-size: xx-large;
+
+   }
+   .slider_items{
+    display: flex;
+    gap: 24px;
+   }
+
+
+   .card_item_contenido{
+
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    padding: 10px;
+   }
+
+   .card_item_licencia{
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+   }
+
+   .card_item_nombre{
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+   }
+
+   .card_item_precio{
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+
+   }
+
+   .card_item_cuotas{
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1D84B5;
+
+   }
+
+   .card_item_cover{
+
+    display: flex;
+    position: relative;
+   }
+
+   .card_item_tag{
+    background: #FF3333;
+    padding: 5px 10px;
+    font-family: inherit;
+    font-size: 9px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+   }
+
+   .card_item_cover img {
+
+    animation: fade .8s;
+   }
+
+   .card_item_cover-back{
+
+    display: none;
+   }
+   .card_item_cover:hover .card_item_cover-back{
+    display: block;
+
+
+   }
+   .card_item_cover:hover .card_item_cover-front{
+    display: none;
+
+
+   }
+
+
+   /*@KEYFRAMES*/
+   
+   @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+   }
+
+
+/*FOOTER*/
+
+  .footer{
+    background-color: #30343F;
+    color: #FFFFFF;
+    padding: 50px 0;
+  }
+
+  .footer_copy{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+
+  }
+
+  
