@@ -214,9 +214,9 @@ gap: 5px;
     font-size: xx-large;
 
    }
-   .slider_items{
-    display: flex;
-    gap: 24px;
+   iconify-icon{
+
+    color: #30343F;
    }
 
 
